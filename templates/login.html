@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+
+<form class="form-login" method='POST'>{% csrf_token %}
+    <h1 class="h3 mb-3 fw-normal">Please login</h1>
+    {% if error %}
+    {{ error }}
+    {% endif %}
+
+    <div class="form-floating">
+      <input type="text" class="form-control" id="floatingInput" placeholder="Username" name="username_data">
+      <label for="floatingInput">User name</label>
+    </div>
+
+
+    <div class="form-floating">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password_data">
+      <label for="floatingPassword">Password</label>
+    </div>
+
+
+    </div>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">login</button>
+    <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+</form>
+
+</div>
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
